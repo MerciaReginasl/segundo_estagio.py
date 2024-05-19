@@ -3,11 +3,11 @@
 #string não contiver a letra p, imprima -2.
 #Resposta:
 def indice_segunda_ocorrencia_p(string):
-primeira_ocorrencia = string.find('p')
-if primeira_ocorrencia == -1:
-return -2
-segunda_ocorrencia = string.find('p', primeira_ocorrencia + 1)
-return segunda_ocorrencia if segunda_ocorrencia != -1 else -1
+    primeira_ocorrencia = string.find('p')
+    if primeira_ocorrencia == -1:
+        return -2
+    segunda_ocorrencia = string.find('p', primeira_ocorrencia + 1)
+        return segunda_ocorrencia if segunda_ocorrencia != -1 else -1
 
 # Testando a função com uma string de exemplo
 string_exemplo = "palavra com duas letras p"
