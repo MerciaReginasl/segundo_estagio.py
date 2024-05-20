@@ -1,0 +1,27 @@
+import math
+
+def calcular_taxa_transferencia_calor(L, k, T1, T2, r1, r2):
+    # Cálculo da taxa de transferência de calor q
+    q = 2 * math.pi * L * k * (T1 - T2) / math.log(r2 / r1)
+    return q
+
+def main():
+    # Valor da condutividade térmica do cobre
+    k = 401  # em Watts/(°C*m)
+    
+    # Solicita ao usuário os valores necessários
+    L = float(input("Digite o comprimento do tubo (L) em metros: "))
+    T1 = float(input("Digite a temperatura interna (T1) em °C: "))
+    T2 = float(input("Digite a temperatura externa (T2) em °C: "))
+    r1 = float(input("Digite o raio interno do tubo (r1) em metros: "))
+    r2 = float(input("Digite o raio externo do tubo (r2) em metros: "))
+    
+    # Calcula a taxa de transferência de calor
+    q = calcular_taxa_transferencia_calor(L, k, T1, T2, r1, r2)
+    
+    # Exibe o resultado
+    print(f"A taxa de transferência de calor é {q:.2f} Watts")
+
+# Chama a função principal
+if __name__ == "__main__":
+    main()
